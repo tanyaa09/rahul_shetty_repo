@@ -22,8 +22,8 @@ steps:
     goals: 'package'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '/home/vsts/work/1/s/webapp/target/webapp.war'
-    Contents: '**/.war'
+    SourceFolder: '/home/vsts/work/1/s/webapp/target/'
+    Contents: 'webapp.war'
     TargetFolder: '$(build.artifactstagingdirectory)'#this is the path where we need to add the war file.
 - task: PublishBuildArtifacts@1
   inputs:
